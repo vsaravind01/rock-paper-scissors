@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Materialize</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Icon Fonts-->
+    <link href="https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2">
+    <!--Materialize CSS-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="Sample.css">
+</head>
+
+<body>
+    <nav class="z-depth-5">
+        <div class="nav-wrapper deep-purple accent-2">
+            <div class="container">
+                <a href="#!" class="brand-logo">Suede's</a>
+                <div class="hide-on-large-only">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </div>
+            <ul class="sidenav" id="slide-out">
+                <li><a class="waves-effect waves-dark" href="#!"><i class="material-icons">home</i>Home</a></li>
+                <li><a class="waves-effect waves-dark" href="#!"><i class="material-icons">info</i>About</a></li>
+                <li><a class="dropdown-trigger1" href="#!" data-target="dropdown2"><i class="material-icons">contacts</i>Contact</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="waves-effect waves-dark" href="#">Home</a></li>
+                <li><a class="waves-effect waves-dark" href="#">About</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Contact<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">email</i>Email</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">phone</i>Phone</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">location_on</i>Location</a></li>
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">email</i>Email</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">phone</i>Phone</a></li>
+                <li class="divider"></li>
+                <li><a href="#!" class="waves-effect waves-dark deep-purple-text text-darken"><i class="material-icons left">location_on</i>Location</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/some-bis-biswas-scenery-wallpaper.jpg"></div>
+    </div>
+    <section>
+        <div class="content">
+            <h1>Parallax Effect</h1>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+    <div class="parallax-container">
+        <div class="parallax"><img src="img/sunset-scenery-landscape-tree-digital-art-illustration-uhdpaper.com-hd-4.2017.jpg"></div>
+    </div>
+    <script src="JQuery.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".dropdown-trigger").dropdown({
+            inDuration: 300,
+            outDuration: 350,
+            hover: true,
+            alignment: 'left',
+            constrainWidth: false
+        });
+        $(".dropdown-trigger1").dropdown({
+            inDuration: 300,
+            outDuration: 350,
+            hover: true,
+            alignment: 'left',
+            constrainWidth: true
+        });
+        $(".sidenav").sidenav();
+        $('.parallax').parallax();
+    })
+    </script>
+</body>
+
+</html>
