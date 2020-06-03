@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About</title>
+	<link rel="icon" href="img/3079157622_c2738c11-8a9a-4261-8e80-8b8893cbe5fb.png" type="image/png" sizes="20x20">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+    <!--Google Icon Fonts-->
+    <link href="https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2">
+    <!--Materialize CSS-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css">
+    <script src="JQuery.min.js"></script>
+    <style>
+        .switch label input[type=checkbox]:checked + .lever:after {
+ 
+             background-color: white;
+        }
+        .switch label input[type=checkbox]:checked + .lever {
+ 
+             background-color: #F2F2F2;
+        }
+        .switch label input[type=checkbox] + .lever:after{
+            background-color: black;
+        }
+        .switch label input[type=checkbox] + .lever{
+            background-color: #494949;
+        }
+    	nav .brand-logo { 
+            font-size: 1rem; 
+            padding-right: 30px;
+        }
+
+        input[name=link] {
+            pointer-events: none;
+           }
+    </style>
+
+<script>
+        $(document).ready(function(){
+        $("#switchbox").prop('checked',false);
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $("#mode").html("Light Mode");
+                $("#mode").removeClass("black-text").addClass("white-text");
+            }
+            else if($(this).prop("checked") == false){          
+                $("#mode").html("Dark Mode");
+                $("#mode").addClass("black-text").removeClass("white-text");
+            }
+        });
+    });
+
+        
+
+    function copy() {
+      var copyText = document.getElementById("item");
+      copyText.select();
+      document.execCommand("copy");
+      M.toast({html: 'Link Copied !', classes: 'rounded'});
+    }
+
+    function gotogame(){
+        window.location.href = 'index.html';
+    }
+
+</script>
+
+</head>
+<body>
+	<nav>
+        <div class="nav-wrapper pink darken-1 hoverable">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons" id="menu_mode">menu</i>
+            </a>
+             <a href="#!" class="brand-logo">Know about the Game</a>
+            <ul class="sidenav hoverable" id="slide-out">
+                <li><a class="waves-effect waves-dark" href="index.html" id="home"><i class="material-icons do">home</i>Home</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="waves-effect waves-dark" href="#!" id="about"><i class="material-icons do">info</i>About</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="waves-effect waves-dark" href="contact.html" id="contacts"><i class="material-icons do">contacts</i>Contact</a></li>
+                <li><div class="divider"></div></li>
+            </ul>
+    </nav>
+    <div class="row">
+  
+    <div class="card col s12">
+    <div class="card-content">
+      <p>This is the same Stone Paper Scissors game that we all played in our childhood. This game is designed with a fair play policy i.e., there is cheating in this game. All you have to do is to select your choice (Stone, Paper, Scissors), follow the Step-1 to select your choice. Then there will be a randomly generated choice from your computer (Stone, Paper, Scissors), Note : It's randomly generated choice which nobody can predict. Computer's choice will be displayed near the respective picture, see Step-2 to visualize it. The results will be displayed at the last row, to know more about the results see Step-3. Here comes the intresting part! If you wish to dark mode check out the switch at the top right corner, see step-4. Play using your phone to get better experience. Finially the import part is in step-5.</p>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a class="active" href="#step-1">step-1</a></li>
+        <li class="tab"><a href="#step-2">Step-2</a></li>
+        <li class="tab"><a href="#step-3">step-3</a></li>
+        <li class="tab"><a href="#step-4">step-4</a></li>
+        <li class="tab"><a href="#step-5">step-5</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+              <div id="step-1">
+                  <ul class="collection">
+                        <li class="collection-item white avatar">
+                              <img src="img/icons8-hand-rock-48.png" alt="" class="circle">
+                              <span class="title black-text">Stone</span>
+                                
+                              <a href="#!" class="btn-floating pulse green secondary-content"><i class="material-icons white-text">play_arrow</i></a>
+                        </li>
+                        <p class="right green-text">Click the Green Button to Select Your Choice !</p>
+                    </ul>
+              </div>
+              <div id="step-2">
+                  <ul class="collection">
+                        <li class="collection-item valign-wrapper white avatar">
+                            <div class="row">
+                                <div class="col valign-wrapper">
+                                      <i class="left material-icons green-text">computer</i>
+                                      Green represents that You lead your Computer.
+                                </div>
+                                <div class="col valign-wrapper">
+                                      <i class="left material-icons red-text">computer</i>
+                                      Red represents that Your Computer lead You.
+                                </div>
+                                <div class="col valign-wrapper">
+                                      <i class="left material-icons yellow-text">computer</i>
+                                      Yellow represents that you are in a draw with your computer.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+              </div>
+              <div id="step-3">
+                <ul class="collection">
+                        <li class="collection-item white avatar">
+                            
+                                  <i class="material-icons white-text circle amber darken-4" id = "result-icon">play_arrow</i>
+                                  <span class="title black-text-text">Results</span>
+                                  <div class="container">
+                                      <p class = "results black-text">Your Score</p><p class = "results black-text" id="result-user">-</p><p class = "results black-text">Computer Score</p><p class = "results black-text" id="result-computer">-</p>
+                                  </div>
+                        
+                        </li>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons l white-text circle green" id = "result-icon">play_arrow</i>
+                            <span class="title black-text-text">Green represents that You lead your Computer.</span>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons l white-text circle red" id = "result-icon">play_arrow</i>
+                            <span class="title black-text-text">Red represents that Your Computer lead You.</span>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons l white-text circle  yellow darken-1" id = "result-icon">play_arrow</i>
+                            <span class="title black-text-text">Yellow represents that You are in a tie with your Computer.</span>
+                        </li>
+
+                    </ul>
+              </div>
+              <div id="step-4">
+                <nav>
+                    <div class="nav-wrapper pink darken-1">
+                        <div class="container">
+                            <div class="switch right">
+                                <label>
+                                    <input type="checkbox" id="switchbox" unchecked>
+                                    <span class="lever" id="switcher"></span>
+                                </label>
+                            </div>
+                        </div>
+                       <div class="right black-text" id="mode">Dark Mode</div>
+                    </div>
+                </nav>
+              </div>
+              <div id="step-5">
+                  <ul class="collection">
+                        <li class="collection-item valign-wrapper white avatar">
+                            <div class="row">
+                                <div class="col valign-wrapper">
+                                      <img src="img/emoji.png" alt="Enjoy" class="circle">
+                                      <p>Enjoy the Game <br> and share it <br> with your friends...</p>
+                                      <button class="btn waves-effect waves-dark light-green secondary-content" onclick="gotogame()"> Play </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="collection-item valign-wrapper white avatar">
+                            <div class="row">
+                                <img src="img/share.png" alt="Enjoy" class="circle">
+                                <input class="col black-text" value="vsaravind01.github.io" id="item" type="text" name="link">
+                                <button class="btn waves-effect waves-dark blue accent-2 white-text scondary-content" onclick="copy()" id="copy"> Copy Link </button>
+                            </div>
+                        </li>
+                 </ul>
+              </div>
+    </div>
+  </div>
+  </div>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+		    $(document).ready(function() {
+		        $(".sidenav").sidenav();
+		    });
+		     $(document).ready(function(){
+			    $('.tabs').tabs();
+			  });
+	</script>
+</body>
+</html>

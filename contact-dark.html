@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+	<link rel="icon" href="img/3079157622_c2738c11-8a9a-4261-8e80-8b8893cbe5fb.png" type="image/png" sizes="20x20">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+    <!--Google Icon Fonts-->
+    <link href="https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2">
+    <!--Materialize CSS-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css">
+    <script src="JQuery.min.js"></script>
+    <style>
+    	nav .brand-logo { 
+            font-size: 1rem; 
+            padding-right: 30px;
+        }
+        .z-depth-3 {
+             box-shadow: 0 7px 13px 1px rgba(255,255,255, 0.14), 0 2px 10px 1px rgba(255,255,255, 0.12), 0 3px 2px -9px rgba(255,255,255, 0.3);
+        }
+        .tabs .indicator {
+            background-color:#f50057;
+        } /*Color of underline*/
+
+    </style>
+</head>
+<body class="black">
+	<nav class="z-depth-3">
+        <div class="nav-wrapper pink darken-1">
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons black-text" id="menu_mode">menu</i>
+            </a>
+             <a href="#!" class="brand-logo black-text">Sudharsan Aravind</a>
+            <ul class="sidenav hoverable black" id="slide-out">
+                <li><a class="waves-effect white-text waves-light" href="index-dark.html" id="home"><i class="material-icons do white-text">home</i>Home</a></li>
+                <li><div class="divider white"></div></li>
+                <li><a class="waves-effect white-text waves-light" href="about-dark.html" id="about"><i class="material-icons do white-text">info</i>About</a></li>
+                <li><div class="divider white"></div></li>
+                <li><a class="waves-effect white-text waves-light" href="#" id="contacts"><i class="material-icons do white-text">contacts</i>Contact</a></li>
+                <li><div class="divider white"></div></li>
+            </ul>
+            <div class="container">
+                <div class="right">
+                    <label>
+                        <img src="img/me.jpg" alt="Sudharsan Aravind" class="circle img-responsive z-depth-3">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+    <div class="col grey darken-1 s2"></div>
+    <div class="card z-depth-3 grey darken-1 col s10">
+    <div class="card-content grey darken-1 white-text">
+      <p>I'm a professional programmer and almost an accomplished Python Scripter. I can do any sort of program to automate your routine computational tasks. For any queries contact me in any of the following media. Do enjoy the game and share with your friends. Follow me to get more updates.</p>
+    </div>
+    <div class="card-tabs grey darken-2">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab grey darken-1"><a href="#Google"><img src="img/32px-Google_'G'_Logo.svg.png" alt="Google"></a></li>
+        <li class="tab grey darken-1"><a href="#GitHub"><img src="img/Github.png" alt="GitHub"></a></li>
+        <li class="tab grey darken-1"><a class="active" href="#Twitter"><img src="img/twitter.png" alt="Twitter"></a></li>
+        <li class="tab grey darken-1"><a href="#Instagram"><img src="img/instagram.png" alt="Instagram"></a></li>
+        <li class="tab grey darken-1"><a href="#Facebook"><img src="img/facebook.png" alt="Facebook"></a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-2">
+      <div id="Google">vsaravind01@gmail.com</div>
+      <div id="GitHub">vsaravind01</div>
+      <div id="Twitter">@vsaravind01</div>
+      <div id="Instagram">@sudharsan_aravind</div>
+      <div id="Facebook">@Sudharsan Aravind</div>
+    </div>
+  </div>
+  </div>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script>
+		    $(document).ready(function() {
+		        $(".sidenav").sidenav();
+		    });
+		     $(document).ready(function(){
+			    $('.tabs').tabs();
+			  });
+	</script>
+</body>
+</html>

@@ -29,22 +29,40 @@
             background-color: #494949;
         }
 
-	    a.copyright {
-	        position: absolute;
-	        width: 100%;
-	        color: grey;
-	        line-height: 40px;
-	        font-size: 0.8em;
-	        text-align: center;
-	        bottom:0;
-	    }
+        p.copyright {
+            position: absolute;
+            width: 100%;
+            color: grey;
+            line-height: 40px;
+            font-size: 0.8em;
+            text-align: center;
+            bottom:0;
+        }
         nav .brand-logo { 
             font-size: 1.3rem; 
         }
 </style>
     <script>
         $(document).ready(function(){
-        $("#switchbox").prop('checked',false);
+            $("#menu_mode").css("color","black");
+            $("body").css("background-color","black");
+            $("#slide-out").addClass("black");
+            $("#home").removeClass("waves-dark").addClass("waves-light white-text");
+            $("#about").removeClass("waves-dark").addClass("waves-light white-text");
+            $("#contacts").removeClass("waves-dark").addClass("waves-light white-text");
+            $(".do").addClass("white-text");
+            $(".divider").addClass("white");
+            $("#btn-custom").removeClass("waves-light accent-3").addClass("waves-dark darken-1");
+            $(".collection-item").removeClass("white").addClass("black");
+            $(".title").addClass("white-text").removeClass("black-text");
+            $(".results").addClass("white-text").removeClass("black-text");
+            $("#result-icon").addClass("black-text").removeClass("white-text");
+            $(".secondary-content").addClass("waves-light").removeClass("waves-dark");
+            $(".secondary-content").removeClass("green").addClass("light-green accent-3");
+            $(".play").removeClass("white-text").addClass("black-text");
+            $("#contacts").attr("href", "contact-dark.html");
+            $("#about").attr("href", "about-dark.html");
+        $("#switchbox").prop('checked',true);
         $('input[type="checkbox"]').click(function(){
             if($(this).prop("checked") == true){
                 $("#menu_mode").css("color","black");
@@ -152,7 +170,7 @@
   </ul>
 
 <footer>
-    <a href="#" class="copyright center-align"> &copy; Copyright 2020, Author : Sudharsan Aravind </a>
+    <p class="copyright center-align"> &copy; Copyright 2020, Author : Sudharsan Aravind </p>
 </footer>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script>
