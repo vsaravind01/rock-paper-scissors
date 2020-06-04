@@ -32,6 +32,18 @@
             padding-right: 30px;
         }
 
+        .tabs #ready a{
+            color:red;
+        } /*Black color to the text*/
+
+        .tabs #ready a:hover {
+            color:#000;
+        } /*Text color on hover*/
+
+        .tabs #ready a.active {
+            color:#00c853;
+        }
+
         input[name=link] {
             pointer-events: none;
            }
@@ -76,6 +88,16 @@
             </a>
              <a href="#!" class="brand-logo">Know about the Game</a>
             <ul class="sidenav hoverable" id="slide-out">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="img/some-bis-biswas-scenery-wallpaper.jpg">
+                        </div>
+                        <a href="#user"><img class="circle hoverable z-depth-2" src="img/me.jpg"></a>
+                        <a href="#name"><span class="white-text name">Sudharsan Aravind</span></a>
+                        <a href="#email"><span class="white-text email">vsaravind01@gmail.com</span></a>
+                    </div>
+                </li>
                 <li><a class="waves-effect waves-dark" href="index.html" id="home"><i class="material-icons do">home</i>Home</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="waves-effect waves-dark" href="#!" id="about"><i class="material-icons do">info</i>About</a></li>
@@ -88,7 +110,7 @@
   
     <div class="card col s12">
     <div class="card-content">
-      <p>This is the same Stone Paper Scissors game that we all played in our childhood. This game is designed with a fair play policy i.e., there is cheating in this game. All you have to do is to select your choice (Stone, Paper, Scissors), follow the Step-1 to select your choice. Then there will be a randomly generated choice from your computer (Stone, Paper, Scissors), Note : It's randomly generated choice which nobody can predict. Computer's choice will be displayed near the respective picture, see Step-2 to visualize it. The results will be displayed at the last row, to know more about the results see Step-3. Here comes the intresting part! If you wish to dark mode check out the switch at the top right corner, see step-4. Play using your phone to get better experience. Finially the import part is in step-5.</p>
+      <p>This is the same Stone Paper Scissors game that we all played in our childhood. This game is designed with a fair play policy i.e., there is cheating in this game. All you have to do is to select your choice (Stone, Paper, Scissors), follow the Step-1 to select your choice. Then there will be a randomly generated choice from your computer (Stone, Paper, Scissors), Note : It's randomly generated choice which nobody can predict. Computer's choice will be displayed near the respective picture, see Step-2 to visualize it. The results will be displayed at the last row, to know more about the results see Step-3. Here comes the intresting part! If you wish to switch to dark mode check out the switch at the top right corner, see Step-4. Play using your phone to get better experience. Finially the import part is in Step-5.</p>
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
@@ -96,7 +118,7 @@
         <li class="tab"><a href="#step-2">Step-2</a></li>
         <li class="tab"><a href="#step-3">step-3</a></li>
         <li class="tab"><a href="#step-4">step-4</a></li>
-        <li class="tab"><a href="#step-5">step-5</a></li>
+        <li class="tab" id="ready"><a href="#step-5">READY!</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
@@ -105,29 +127,71 @@
                         <li class="collection-item white avatar">
                               <img src="img/icons8-hand-rock-48.png" alt="" class="circle">
                               <span class="title black-text">Stone</span>
-                                
                               <a href="#!" class="btn-floating pulse green secondary-content"><i class="material-icons white-text">play_arrow</i></a>
+                              <div class="row"><p class="col s6 green-text">Click the Green Button to Select Your Choice !</p></div>
                         </li>
-                        <p class="right green-text">Click the Green Button to Select Your Choice !</p>
+                        <li class="collection-item white avatar">
+                            <div class="center-align">
+                                <img src="img/icons8-hand-rock-96.png" alt="" class="circle grey lighten-4">
+                                <p>Stone</p>
+                            </div>
+                            <div class="valign-wrapper">
+                              <img src="img/icons8-hand-48.png" alt="" class="left-align">
+                              <img src="img/next(4).png" alt="" class="">
+                              <img src="img/icons8-hand-rock-48.png" alt="" class="center-align">
+                              <img src="img/next(1).png" alt="" class="">
+                              <img src="img/icons8-hand-scissors-48.png" alt="" class="right-align">
+                            </div>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <div class="center-align">
+                                <img src="img/icons8-hand-96.png" alt="" class="circle grey lighten-4">
+                                <p>Paper</p>
+                            </div>
+                            <div class="valign-wrapper">
+                              <img src="img/icons8-hand-scissors-48.png" alt="" class="left-align">
+                              <img src="img/next(4).png" alt="" class="">
+                              <img src="img/icons8-hand-48.png" alt="" class="center-align">
+                              <img src="img/next(1).png" alt="" class="">
+                              <img src="img/icons8-hand-rock-48.png" alt="" class="right-align">
+                            </div>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <div class="center-align">
+                                <img src="img/icons8-hand-scissors-96.png" alt="" class="circle grey lighten-4">
+                                <p>Scissors</p>
+                            </div>
+                            <div class="valign-wrapper">
+                              <img src="img/icons8-hand-rock-48.png" alt="" class="left-align">
+                              <img src="img/next(4).png" alt="" class="">
+                              <img src="img/icons8-hand-scissors-48.png" alt="" class="center-align">
+                              <img src="img/next(1).png" alt="" class="">
+                              <img src="img/icons8-hand-48.png" alt="" class="right-align">
+                            </div>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <img src="img/next.png" alt="Green Arrow" class="circle lighten-4">
+                             <span class="title">Win</span>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <img src="img/next(5).png" alt="Green Arrow" class="circle lighten-4">
+                            <span class="title">Lose</span>
+                        </li>
                     </ul>
               </div>
               <div id="step-2">
                   <ul class="collection">
-                        <li class="collection-item valign-wrapper white avatar">
-                            <div class="row">
-                                <div class="col valign-wrapper">
-                                      <i class="left material-icons green-text">computer</i>
-                                      Green represents that You lead your Computer.
-                                </div>
-                                <div class="col valign-wrapper">
-                                      <i class="left material-icons red-text">computer</i>
-                                      Red represents that Your Computer lead You.
-                                </div>
-                                <div class="col valign-wrapper">
-                                      <i class="left material-icons yellow-text">computer</i>
-                                      Yellow represents that you are in a draw with your computer.
-                                </div>
-                            </div>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons white circle green-text" id = "result-icon">computer</i>
+                            <span class="title black-text-text">Green represents that You Won your Computer.</span>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons white circle red-text" id = "result-icon">computer</i>
+                            <span class="title black-text-text">Red represents that Your Computer Won You.</span>
+                        </li>
+                        <li class="collection-item white avatar">
+                            <i class="material-icons white circle  yellow-text text-darken-1" id = "result-icon">computer</i>
+                            <span class="title black-text-text">Yellow represents that You and your Computer had chosen the same choice.</span>
                         </li>
                     </ul>
               </div>

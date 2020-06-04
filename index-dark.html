@@ -29,15 +29,21 @@
             background-color: #494949;
         }
 
-        p.copyright {
+        a.copyright {
             position: absolute;
+            height: 0px;
             width: 100%;
             color: grey;
-            line-height: 40px;
+            line-height: 10px;
             font-size: 0.8em;
             text-align: center;
             bottom:0;
         }
+    
+        .waves-effect.waves-brown .waves-ripple {
+            background-color: rgba(246, 206, 4, 0.99);
+          }
+
         nav .brand-logo { 
             font-size: 1.3rem; 
         }
@@ -51,7 +57,7 @@
             $("#about").removeClass("waves-dark").addClass("waves-light white-text");
             $("#contacts").removeClass("waves-dark").addClass("waves-light white-text");
             $(".do").addClass("white-text");
-            $(".divider").addClass("white");
+            $(".divider").addClass("grey");
             $("#btn-custom").removeClass("waves-light accent-3").addClass("waves-dark darken-1");
             $(".collection-item").removeClass("white").addClass("black");
             $(".title").addClass("white-text").removeClass("black-text");
@@ -62,6 +68,8 @@
             $(".play").removeClass("white-text").addClass("black-text");
             $("#contacts").attr("href", "contact-dark.html");
             $("#about").attr("href", "about-dark.html");
+            $(".brand-logo").attr("href", "about-dark.html");
+            $("#fabc").attr("href", "about-dark.html");
         $("#switchbox").prop('checked',true);
         $('input[type="checkbox"]').click(function(){
             if($(this).prop("checked") == true){
@@ -72,7 +80,7 @@
                 $("#about").removeClass("waves-dark").addClass("waves-light white-text");
                 $("#contacts").removeClass("waves-dark").addClass("waves-light white-text");
                 $(".do").addClass("white-text");
-                $(".divider").addClass("white");
+                $(".divider").addClass("grey");
                 $("#btn-custom").removeClass("waves-light accent-3").addClass("waves-dark darken-1");
                 $(".collection-item").removeClass("white").addClass("black");
                 $(".title").addClass("white-text").removeClass("black-text");
@@ -83,6 +91,9 @@
                 $(".play").removeClass("white-text").addClass("black-text");
                 $("#contacts").attr("href", "contact-dark.html");
                 $("#about").attr("href", "about-dark.html");
+                $(".brand-logo").attr("href", "about-dark.html");
+                $("#fabc").removeClass("white").addClass("black");
+                $("#fabc").attr("href", "about-dark.html");
 
             }
             else if($(this).prop("checked") == false){
@@ -93,7 +104,7 @@
                 $("#about").addClass("waves-dark").removeClass("waves-light white-text");
                 $("#contacts").addClass("waves-dark").removeClass("waves-light white-text");
                 $(".material-icons").removeClass("white-text");
-                $(".divider").removeClass("white");
+                $(".divider").removeClass("grey");
                 $("#btn-custom").addClass("accent-3").removeClass("darken-1");
                 $("#btn-custom").addClass("waves-light accent-3").removeClass("waves-dark darken-1");
                 $(".collection-item").addClass("white").removeClass("black");
@@ -105,6 +116,9 @@
                 $(".play").addClass("white-text").removeClass("black-text");
                 $("#contacts").attr("href", "contact.html");
                 $("#about").attr("href", "about.html");
+                $(".brand-logo").attr("href", "about.html");
+                $("#fabc").addClass("white").removeClass("black");
+                $("#fabc").attr("href", "about.html");
             }
         });
     });
@@ -118,8 +132,18 @@
             <a href="#" data-target="slide-out" class="sidenav-trigger">
                 <i class="material-icons" id="menu_mode">menu</i>
             </a>
-             <a class="brand-logo ">Stone Paper Scissors</a>
+             <a class="brand-logo" href="about-dark.html">Stone Paper Scissors</a>
             <ul class="sidenav hoverable" id="slide-out">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img src="img/some-bis-biswas-scenery-wallpaper.jpg">
+                        </div>
+                        <a href="#user"><img class="circle hoverable z-depth-1" src="img/me.jpg"></a>
+                        <a href="#name"><span class="white-text name">Sudharsan Aravind</span></a>
+                        <a href="#email"><span class="white-text email">vsaravind01@gmail.com</span></a>
+                    </div>
+                </li>
                 <li><a class="waves-effect waves-dark" href="#" id="home"><i class="material-icons do">home</i>Home</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="waves-effect waves-dark" href="about.html" id="about"><i class="material-icons do">info</i>About</a></li>
@@ -170,8 +194,13 @@
   </ul>
 
 <footer>
-    <p class="copyright center-align"> &copy; Copyright 2020, Author : Sudharsan Aravind </p>
+    <a class="copyright center-align"> &copy; Copyright 2020, Author : Sudharsan Aravind </a>
 </footer>
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-brown waves-ripple waves-accent-3 black" id="fabc" href="about.html">
+    <i class="large material-icons amber-text text-darken-1">vibration</i>
+  </a>
+</div>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
     <script>
     $(document).ready(function() {
